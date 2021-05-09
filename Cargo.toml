@@ -1,0 +1,18 @@
+[package]
+name = "pong"
+version = "0.0.1"
+authors = ["Nikita Krupitskas <krupitskaz@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+[target.'cfg(target_os="android")'.dependencies]
+jni = "0.16"
+
+[lib]
+path = "src/android_lib.rs"
+name = "pong_android"
+crate-type = ["dylib"]
+
+[[bin]]
+name = "pong_pc"
+path = "src/pc_main.rs"
