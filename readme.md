@@ -27,4 +27,10 @@ rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-andro
 
 Install [Python](https://www.python.org/downloads/) on your PC.
 
+
+## References
+- [Rust Android Gradle Plugin](https://github.com/mozilla/rust-android-gradle)
+- [Deploying Rust application on Android](https://krupitskas.github.io/posts/quest-dev-part-2/)
+
+
 Done!
