@@ -16,8 +16,15 @@
 
 ## Rust
 
-Install rust on your PC from [rustup](https://rustup.rs). 
+Install rust on your PC from [rustup](https://rustup.rs), 
 then add some Android targets (arm64, arm, x86_64, x86) for rust.
 ```
 rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
 ```
+
+
+## Python
+
+Install [Python](https://www.python.org/downloads/) on your PC.
+
+Done!
