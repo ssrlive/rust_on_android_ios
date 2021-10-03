@@ -3,10 +3,10 @@
 
 ## Android Studio
 
-* Android Studio version 4.2
-* Android SDK Platform 30
+* Android Studio Arctic Fox | 2020.3.1 Patch 2
+* Android SDK Platform 31
 * Android NDK 22.1.7171670
-* Android SDK Build-Tools
+* Android SDK Build-Tools 31.0.0
 * Android SDK Command-line Tools
 * Android SDK Platform-Tools
 
