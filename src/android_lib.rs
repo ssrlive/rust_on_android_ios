@@ -1,9 +1,10 @@
 use std::os::raw::{c_char};
 use std::ffi::{CString, CStr};
 
+/// # Safety
 #[no_mangle]
-pub extern fn rust_greeting(to: *const c_char) -> *mut c_char {
-    let c_str = unsafe { CStr::from_ptr(to) };
+pub unsafe extern fn rust_greeting(to: *const c_char) -> *mut c_char {
+    let c_str = CStr::from_ptr(to);
     let recipient = match c_str.to_str() {
         Err(_) => "there",
         Ok(string) => string,
