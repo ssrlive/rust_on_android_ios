@@ -1,3 +1,5 @@
 Cargo.lock
 *.log
+xcuserdata/
+project.xcworkspace/
 /target

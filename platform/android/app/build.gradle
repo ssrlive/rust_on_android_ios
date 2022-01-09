@@ -26,7 +26,7 @@ apply plugin: 'org.mozilla.rust-android-gradle.rust-android'
 
 cargo {
     module  = "../../../"
-    libname = "pong_android"
+    libname = "pong_lib"
     targets = ["arm64", "x86", "x86_64", "arm"]
     prebuiltToolchains = true
     apiLevel = 21

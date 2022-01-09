@@ -2,7 +2,7 @@ package com.krupitskas.pong;
 
 public class RustBindings {
     static {
-        System.loadLibrary("pong_android");
+        System.loadLibrary("pong_lib");
     }
 
     private static native String greeting(final String pattern);

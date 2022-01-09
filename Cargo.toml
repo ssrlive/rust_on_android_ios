@@ -9,9 +9,9 @@ edition = "2018"
 jni = "0.19.0"
 
 [lib]
-path = "src/android_lib.rs"
-name = "pong_android"
-crate-type = ["dylib"]
+path = "src/lib.rs"
+name = "pong_lib"
+crate-type = ["staticlib", "cdylib"]
 
 [[bin]]
 name = "pong_pc"

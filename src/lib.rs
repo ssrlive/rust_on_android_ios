@@ -13,6 +13,13 @@ pub unsafe extern fn rust_greeting(to: *const c_char) -> *mut c_char {
     CString::new("Rust community: Hello ".to_owned() + recipient).unwrap().into_raw()
 }
 
+/// # Safety
+#[no_mangle]
+pub unsafe extern fn rust_greeting_free(s: *mut c_char) {
+    if s.is_null() { return }
+    let _ = CString::from_raw(s);
+}
+
 #[cfg(target_os="android")]
 #[allow(non_snake_case)]
 pub mod android {
