@@ -35,8 +35,8 @@ pub mod android {
         // Our Java companion code might pass-in "world" as a string, hence the name.
         let world = rust_greeting(env.get_string(java_pattern).expect("invalid pattern string").as_ptr());
         // Retake pointer so that we can use it below and allow memory to be freed when it goes out of scope.
-        let world_ptr = CString::from_raw(world);
-        let output = env.new_string(world_ptr.to_str().unwrap()).expect("Couldn't create java string!");
+        let output = env.new_string(CStr::from_ptr(world).to_str().unwrap()).expect("Couldn't create java string!");
+        rust_greeting_free(world);
 
         output.into_inner()
     }
