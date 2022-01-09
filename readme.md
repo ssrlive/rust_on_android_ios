@@ -1,4 +1,4 @@
-# Rust with Android Studio
+# Rust with Android Studio or Xcode
 
 
 ## Android Studio
