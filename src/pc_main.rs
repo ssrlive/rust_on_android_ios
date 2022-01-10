@@ -1,3 +1,8 @@
+#[path = "./lib.rs"] mod pong_lib;
+
+use pong_lib::inner_rust_greeting;
+
 fn main() {
-    println!("Here we call PC stuff");
+    let info = "from PC";
+    println!("{}", inner_rust_greeting(info));
 }

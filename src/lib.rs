@@ -1,6 +1,10 @@
 use std::os::raw::{c_char};
 use std::ffi::{CString, CStr};
 
+pub fn inner_rust_greeting(to: &str) -> String {
+    "Rust community: Hello ".to_owned() + to
+}
+
 /// # Safety
 #[no_mangle]
 pub unsafe extern fn rust_greeting(to: *const c_char) -> *mut c_char {
@@ -10,7 +14,7 @@ pub unsafe extern fn rust_greeting(to: *const c_char) -> *mut c_char {
         Ok(string) => string,
     };
 
-    CString::new("Rust community: Hello ".to_owned() + recipient).unwrap().into_raw()
+    CString::new(inner_rust_greeting(recipient)).unwrap().into_raw()
 }
 
 /// # Safety
