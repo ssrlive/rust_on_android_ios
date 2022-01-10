@@ -39,11 +39,13 @@ Install [Python](https://www.python.org/downloads/) on your PC.
 
 ## References
 - [Rust Android Gradle Plugin](https://github.com/mozilla/rust-android-gradle)
-- [Deploying Rust application on Android](https://krupitskas.github.io/posts/quest-dev-part-2/)
+- [Workshop: Use Rust in iOS Apps](https://github.com/thombles/dw2019rust)
 - [One more plugin to build Rust for Android](https://dev.to/willir/one-more-plugin-to-build-rust-for-android-125h)
 - [Cargo NDK for Android projects](https://github.com/willir/cargo-ndk-android-gradle)
 - [Running Rust on Android](https://blog.svgames.pl/article/running-rust-on-android)
 - [Building and Deploying a Rust library on iOS](https://mozilla.github.io/firefox-browser-architecture/experiments/2017-09-06-rust-on-ios.html)
 - [Building and Deploying a Rust library on Android](https://mozilla.github.io/firefox-browser-architecture/experiments/2017-09-21-rust-on-android.html)
+- [Workshop: Use Rust in iOS Apps](https://github.com/thombles/dw2019rust)
+
 
 Done!
