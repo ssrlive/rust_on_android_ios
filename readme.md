@@ -10,6 +10,8 @@
 * Android SDK Command-line Tools
 * Android SDK Platform-Tools
 
+#### Config: Tools >> SDK Manager >>  SDK Tools (middle tab):
+
 ![img](./sdk.png)
 
 
