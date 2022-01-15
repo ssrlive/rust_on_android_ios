@@ -10,6 +10,8 @@
 * Android SDK Command-line Tools
 * Android SDK Platform-Tools
 
+#### Config: Tools >> SDK Manager >>  SDK Tools (middle tab):
+
 ![img](./sdk.png)
 
 
@@ -20,6 +22,10 @@ Install rust on your PC from [rustup](https://rustup.rs),
 then add some Android targets (arm64, arm, x86_64, x86) for rust.
 ```
 rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
+```
+Uses [rust-android-gradle](https://github.com/mozilla/rust-android-gradle) plugin, so is built with the command:
+```cli
+gradlew cargoBuild
 ```
 
 ### Function naming convention
