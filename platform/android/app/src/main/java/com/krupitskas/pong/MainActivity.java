@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         RustBindings g = new RustBindings();
-        String r = g.sayHello("world");
+        String r = g.sayHello("Android world");
         ((TextView)findViewById(R.id.helloWorldText)).setText(r);
     }
 }
