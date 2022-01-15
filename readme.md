@@ -24,10 +24,23 @@ then add some Android targets (arm64, arm, x86_64, x86) for rust.
 rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
 ```
 Uses [rust-android-gradle](https://github.com/mozilla/rust-android-gradle) plugin, so is built with the command:
-
 ```cli
 gradlew cargoBuild
 ```
+
+### Function naming convention
+
+In `src/lib.rs` you need to name the function according to the following naming convention in order to make it available in `Java`.
+
+If the _Java_ function is called `greeting` and it is saved in a file named `RustBindings.java` pulled from package `com.krupitskas.pong` then in _Rust_ the function name is:
+
+| Java |    package name     |   filename   | function name |
+| :--: | :-----------------: | :----------: | :-----------: |
+| Java | com_krupitskas_pong | RustBindings |   greeting    |
+
+Which would look like this:
+
+`Java_com_krupitskas_pong_RustBindings_greeting(...)`
 
 ## Python
 
