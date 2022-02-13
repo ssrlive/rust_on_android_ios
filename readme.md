@@ -5,7 +5,7 @@
 
 * Android Studio Arctic Fox | 2020.3.1 Patch 2
 * Android SDK Platform 31
-* Android NDK 22.1.7171670
+* Android NDK 23.1.7779620
 * Android SDK Build-Tools 31.0.0
 * Android SDK Command-line Tools
 * Android SDK Platform-Tools
@@ -14,7 +14,16 @@
 
 ![img](./sdk.png)
 
+### Fixing build error for Above NDK 23 and more
 
+find out all the 4 folders containing file `libunwind.a`, in my PC, it's `C:\Users\Administrator\AppData\Local\Android\Sdk\ndk\23.1.7779620\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\12.0.8\lib\linux\x86_64\` and more.
+create 4 `text` files named `libgcc.a` in the folders with 
+```
+INPUT(-lunwind)
+```
+[reference link](https://github.com/rust-windowing/android-ndk-rs/pull/189/files#diff-9c2f0d812ce52310e2784d3ba203437e6f318230e4e4f701b321a0f656dfa416R180-R187)
+
+![image](https://user-images.githubusercontent.com/30760636/153748181-740dba75-f194-43d2-9a72-eb976da86da0.png)
 
 ## Rust
 
