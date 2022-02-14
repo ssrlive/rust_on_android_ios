@@ -21,9 +21,10 @@ create 4 `text` files named `libgcc.a` in the folders with
 ```
 INPUT(-lunwind)
 ```
-[reference link](https://github.com/rust-windowing/android-ndk-rs/pull/189/files#diff-9c2f0d812ce52310e2784d3ba203437e6f318230e4e4f701b321a0f656dfa416R180-R187)
 
-![image](https://user-images.githubusercontent.com/30760636/153748181-740dba75-f194-43d2-9a72-eb976da86da0.png)
+![image](https://user-images.githubusercontent.com/30760636/153782719-458e0054-a800-4a62-87b7-c3fa80a7008c.png)
+
+[reference link](https://github.com/rust-windowing/android-ndk-rs/pull/189/files#diff-9c2f0d812ce52310e2784d3ba203437e6f318230e4e4f701b321a0f656dfa416R180-R187)
 
 ## Rust
 
