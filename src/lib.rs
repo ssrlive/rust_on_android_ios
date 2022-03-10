@@ -31,8 +31,9 @@ pub mod android {
 
     use super::*;
     use self::jni::JNIEnv;
-    use self::jni::objects::{JClass, JString};
+    use self::jni::objects::{JClass, JString, JObject};
     use self::jni::sys::{jstring};
+    use std::os::raw::c_void;
 
     #[no_mangle]
     pub unsafe extern fn Java_com_krupitskas_pong_RustBindings_greeting(env: JNIEnv, _: JClass, java_pattern: JString) -> jstring {
@@ -44,4 +45,28 @@ pub mod android {
 
         output.into_inner()
     }
+
+    mod fractal;
+    mod graphic;
+
+    #[no_mangle]
+    pub unsafe extern fn Java_com_krupitskas_pong_RustBindings_renderFractal(env: JNIEnv, _: JClass, bmp: JObject) {
+        let mut info = graphic::AndroidBitmapInfo::new();
+        let raw_env = env.get_native_interface();
+
+        let bmp = bmp.into_inner();
+
+        // Read bitmap info
+        graphic::bitmap_get_info(raw_env, bmp, &mut info);
+        let mut pixels = 0 as *mut c_void;
+
+        // Lock pixel for draw
+        graphic::bitmap_lock_pixels(raw_env, bmp, &mut pixels);
+
+        let pixels =
+            std::slice::from_raw_parts_mut(pixels as *mut u8, (info.stride * info.height) as usize);
+
+        fractal::render(pixels, info.width as u32, info.height as u32);
+        graphic::bitmap_unlock_pixels(raw_env, bmp);
+    }    
 }

@@ -2,7 +2,9 @@ package com.krupitskas.pong;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,5 +16,10 @@ public class MainActivity extends AppCompatActivity {
         RustBindings g = new RustBindings();
         String r = g.sayHello("Android world");
         ((TextView)findViewById(R.id.helloWorldText)).setText(r);
+
+        Bitmap bitmap = Bitmap.createBitmap(800, 800, Bitmap.Config.ARGB_8888);
+        RustBindings.renderFractal(bitmap);
+        ImageView imageView = findViewById(R.id.imageView);
+        imageView.setImageBitmap(bitmap);
     }
 }

@@ -74,6 +74,7 @@ Install [Python](https://www.python.org/downloads/) on your PC.
 - [Running Rust on Android](https://blog.svgames.pl/article/running-rust-on-android)
 - [Building and Deploying a Rust library on iOS](https://mozilla.github.io/firefox-browser-architecture/experiments/2017-09-06-rust-on-ios.html)
 - [Building and Deploying a Rust library on Android](https://mozilla.github.io/firefox-browser-architecture/experiments/2017-09-21-rust-on-android.html)
+- [Render Fractal image in Android bitmap with Rust](https://hoangpq.github.io/posts/rust-ndk/)
 
 
 Done!
