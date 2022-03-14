@@ -13,8 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RustBindings g = new RustBindings();
-        String r = g.sayHello("Android world");
+        String r = RustBindings.greeting("Android world");
         ((TextView)findViewById(R.id.helloWorldText)).setText(r);
 
         Bitmap bitmap = Bitmap.createBitmap(800, 800, Bitmap.Config.ARGB_8888);

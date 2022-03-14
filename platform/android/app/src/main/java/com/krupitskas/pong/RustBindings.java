@@ -7,11 +7,7 @@ public class RustBindings {
         System.loadLibrary("pong_lib");
     }
 
-    private static native String greeting(final String pattern);
-
-    public String sayHello(String to) {
-        return greeting(to);
-    }
+    public static native String greeting(final String pattern);
 
     public static native void renderFractal(Bitmap bitmap);
 }
