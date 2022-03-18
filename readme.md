@@ -5,7 +5,7 @@
 
 * Android Studio Arctic Fox | 2020.3.1 Patch 2
 * Android SDK Platform 31
-* Android NDK 23.1.7779620
+* Android NDK 24.0.8215888
 * Android SDK Build-Tools 31.0.0
 * Android SDK Command-line Tools
 * Android SDK Platform-Tools
@@ -14,10 +14,10 @@
 
 ![img](./sdk.png)
 
-#### Fixing build error for Above NDK 23 and more
+#### Fixing build error for Above NDK 23 and above
 
 find out all the 4 folders containing file `libunwind.a`, in my PC, it's `C:\Users\Administrator\AppData\Local\Android\Sdk\ndk\23.1.7779620\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\12.0.8\lib\linux\x86_64\` and more.
-create 4 `text` files named `libgcc.a` in the folders with 
+create 4 `text` files named `libgcc.a` in the same folders with this contents
 ```
 INPUT(-lunwind)
 ```
@@ -56,6 +56,10 @@ Which would look like this:
 
 Install [Python](https://www.python.org/downloads/) on your PC.
 
+> In `macOS` Monterey 12.3 and above, python was removed by Apple, you must install [Python3](https://www.python.org/downloads/) by yourself, then run this command to make python3 as python.
+> ```
+> ln -s -f /usr/local/bin/python3 /usr/local/bin/python
+> ```
 
 ## iOS
 
