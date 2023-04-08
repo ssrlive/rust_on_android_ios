@@ -24,6 +24,9 @@ rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-andro
 Uses [rust-android-gradle](https://github.com/mozilla/rust-android-gradle) plugin, so is built with the command:
 ```cli
 gradlew cargoBuild
+
+# build release version
+./gradlew assembleRelease
 ```
 
 ### Function naming convention
