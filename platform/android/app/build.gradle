@@ -26,12 +26,13 @@ android {
 apply plugin: 'org.mozilla.rust-android-gradle.rust-android'
 
 cargo {
-    module  = "../../../"
+    module  = "../../../rust"
     libname = "pong_lib"
     targets = ["arm64", "x86", "x86_64", "arm"]
     profile = gradle.startParameter.taskNames.any{it.toLowerCase().contains("release")} ? "release" : "debug"
     prebuiltToolchains = true
     apiLevel = 21
+    targetIncludes = ['libpong_lib.so', 'libmylib.so']
 }
 
 dependencies {
