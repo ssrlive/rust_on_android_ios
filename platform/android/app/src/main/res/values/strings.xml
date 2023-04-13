@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Pong</string>
     <string name="demo">demo</string>
+    <string name="my_number">my number</string>
 </resources>

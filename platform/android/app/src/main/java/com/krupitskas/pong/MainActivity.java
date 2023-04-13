@@ -20,5 +20,8 @@ public class MainActivity extends AppCompatActivity {
         RustBindings.renderFractal(bitmap);
         ImageView imageView = findViewById(R.id.imageView);
         imageView.setImageBitmap(bitmap);
+
+        int m = MylibBindings.add(9, 56);
+        ((TextView)findViewById(R.id.myIntView)).setText(String.format("%s", m));
     }
 }

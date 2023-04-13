@@ -1,5 +1,3 @@
-#[path = "./lib.rs"] mod pong_lib;
-
 use pong_lib::inner_rust_greeting;
 
 fn main() {

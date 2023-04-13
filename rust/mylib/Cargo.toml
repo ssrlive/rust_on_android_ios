@@ -1,0 +1,15 @@
+[package]
+name = "mylib"
+version = "0.0.1"
+authors = ["Nikita Krupitskas <krupitskaz@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+
+[target.'cfg(target_os="android")'.dependencies]
+jni = "0.21"
+
+[lib]
+path = "src/lib.rs"
+name = "mylib"
+crate-type = ["staticlib", "cdylib", "lib"]

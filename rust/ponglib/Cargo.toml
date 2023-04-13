@@ -2,18 +2,18 @@
 name = "pong"
 version = "0.0.1"
 authors = ["Nikita Krupitskas <krupitskaz@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 [target.'cfg(target_os="android")'.dependencies]
-jni = "0.19.0"
+jni = "0.21"
 image = "0.24.1"
 num-complex = "0.4.0"
 
 [lib]
 path = "src/lib.rs"
 name = "pong_lib"
-crate-type = ["staticlib", "cdylib"]
+crate-type = ["staticlib", "cdylib", "lib"]
 
 [[bin]]
 name = "pong_pc"
