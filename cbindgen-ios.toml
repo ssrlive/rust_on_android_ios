@@ -1,0 +1,3 @@
+[export]
+include = ["rust_greeting", "rust_greeting_free"]
+exclude = ["Java_com_krupitskas_pong_RustBindings_greeting", "Java_com_krupitskas_pong_RustBindings_renderFractal", "bitmap_get_info", "bitmap_lock_pixels", "bitmap_unlock_pixels"]
