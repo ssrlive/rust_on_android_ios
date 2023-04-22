@@ -58,6 +58,7 @@ Install [Python](https://www.python.org/downloads/) on your PC.
 - `curl https://sh.rustup.rs -sSf | sh`
 - `rustup target add aarch64-apple-ios aarch64-apple-ios-sim x86_64-apple-ios`
 - `cargo install cargo-lipo`
+- `cargo install cbindgen`
 - `cargo lipo --release`
 
 
