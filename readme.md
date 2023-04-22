@@ -53,14 +53,22 @@ Install [Python](https://www.python.org/downloads/) on your PC.
 > ```
 
 ## iOS
-
+### Prepare
 - macOS / Xcode
 - `curl https://sh.rustup.rs -sSf | sh`
 - `rustup target add aarch64-apple-ios aarch64-apple-ios-sim x86_64-apple-ios`
 - `cargo install cargo-lipo`
 - `cargo install cbindgen`
-- `cargo lipo --release`
 
+### Automation build script
+```bash
+set -e
+PATH="$PATH:${HOME}/.cargo/bin"
+RUST_PROJ=${PROJECT_DIR}/../..
+cd "${RUST_PROJ}"
+cargo lipo --release
+cbindgen --config cbindgen-ios.toml -l C -o target/greetings.h
+```
 
 ## References
 - [Rust Android Gradle Plugin](https://github.com/mozilla/rust-android-gradle)
