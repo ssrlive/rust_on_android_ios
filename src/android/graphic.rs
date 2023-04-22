@@ -20,7 +20,7 @@ impl AndroidBitmapInfo {
     }
 }
 
-#[link(name = "jnigraphics", kind="dylib")]
+#[link(name = "jnigraphics", kind = "dylib")]
 extern "C" {
     #[link_name = "AndroidBitmap_getInfo"]
     pub fn bitmap_get_info(

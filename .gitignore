@@ -1,3 +1,6 @@
+.*
+build/
+tmp/
 .idea/
 Cargo.lock
 *.log
