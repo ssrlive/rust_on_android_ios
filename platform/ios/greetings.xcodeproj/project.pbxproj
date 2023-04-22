@@ -171,7 +171,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "set -e\nPATH=\"$PATH:${HOME}/.cargo/bin\"\nRUST_PROJ=${PROJECT_DIR}/../..\ncd \"${RUST_PROJ}\"\ncbindgen --config cbindgen-ios.toml -l C -o target/greetings.h\n";
+			shellScript = "set -e\nPATH=\"$PATH:${HOME}/.cargo/bin\"\nRUST_PROJ=${PROJECT_DIR}/../..\ncd \"${RUST_PROJ}\"\ncargo lipo --release\ncbindgen --config cbindgen-ios.toml -l C -o target/greetings.h\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
